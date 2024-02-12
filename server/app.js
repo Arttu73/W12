@@ -29,7 +29,7 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/api/book', booksRouter);           
+//app.use('/api/book', booksRouter);           
 
 if (process.env.NODE_ENV === "development") {
     var corsOptions = {
