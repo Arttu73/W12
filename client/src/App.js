@@ -29,10 +29,10 @@ function App() {
 
         <h1>books</h1>
         <form onSubmit={submit}>
-          <input type="string" id="name">name</input>
-          <input type="string" id="author">author</input>
-          <input type="number" id="pages">number</input>
-          <input type="submit" id="submit" >submit</input>
+          <input type="string" id="name"></input>
+          <input type="string" id="author"></input>
+          <input type="number" id="pages"></input>
+          <input type="submit" id="submit" ></input>
         </form>
       </header>
     </div>
