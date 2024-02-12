@@ -12,8 +12,8 @@ var booksRouter = require('./routes/book');
 
 var app = express();
 
-//const mongoDB = "mongodb://127.0.0.1:27017/testdb";
-const mongoDB = "mongodb+srv://arttulaitinen:V7nJlU8il1KjTEkP@testdb.ve9rmvx.mongodb.net/";
+const mongoDB = "mongodb://127.0.0.1:27017/testdb";
+//const mongoDB = "mongodb+srv://arttulaitinen:V7nJlU8il1KjTEkP@testdb.ve9rmvx.mongodb.net/";
 mongoose.connect(mongoDB);
 mongoose.Promise = Promise;
 const db = mongoose.connection;
