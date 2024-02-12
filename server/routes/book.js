@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const Books = require('./models/Books');
+const Books = require('./modules/Books');
 
 /* GET home page. */
 router.post('/api/book', async function(req, res, next) {
