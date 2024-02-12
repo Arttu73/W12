@@ -1,20 +1,28 @@
-import {useState, useEffect} from 'react';
 import './App.css';
 
 function App() {
 
-  const [bookData, setBookData] = useState({})
+  
 
   const submit = (e) => {
+   
     e.preventDefault();
     console.log("Submitting");
-
+    
+    var name = e.target.name.value;
+    var author = e.target.author.value;
+    var pages = e.target.pages.value;
+    
     fetch("/api/book", {
       method: "POST",
       headers: {
         "Content-type": "application/json"
       },
-      body: JSON.stringify(bookData),
+      body: JSON.stringify({
+        "name": name,
+        "author": author,
+        "pages": pages
+      }),
       mode: "cors"
     })
       .then(response => response.json())
