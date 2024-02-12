@@ -7,6 +7,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/api/book', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
 router.post('/api/book', async function(req, res) {
   console.log("posting")
   const name = req.body.name;

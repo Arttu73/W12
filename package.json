@@ -8,12 +8,17 @@
     "install": "cd client && npm install",
     "dev:client": "cd client && npm start",
     "preinstall": "cd server && npm install",
-    "dev:server": "cd server && npm run dev"
+    "dev:server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "nodemon": "^3.0.3"
   },
-  "proxy": "http://localhost:1234"
+  "proxy": "http://localhost:1234",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
