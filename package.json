@@ -17,7 +17,6 @@
     "cors": "^2.8.5",
     "nodemon": "^3.0.3"
   },
-  "proxy": "http://localhost:1234",
   "devDependencies": {
     "concurrently": "^8.2.2"
   }
