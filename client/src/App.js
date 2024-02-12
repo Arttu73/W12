@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import {useState, useEffect} from 'react';
 import './App.css';
 
 function App() {
+
+  const [bookData, setBookData] = useState({})
+
+  const submit = (e) => {
+    e.preventDefault();
+    console.log("Submitting");
+
+    fetch("/api/books", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(bookData),
+      mode: "cors"
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
         <h1>books</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <form onSubmit={submit}>
+          <input type="string" id="name">name</input>
+          <input type="string" id="author">author</input>
+          <input type="number" id="pages">number</input>
+          <input type="submit" id="submit" >submit</input>
+        </form>
       </header>
     </div>
   );

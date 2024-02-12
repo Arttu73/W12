@@ -12,7 +12,7 @@ var booksRouter = require('./routes/book');
 
 var app = express();
 
-const mongoDB = "mongodb://localhost:27017/";
+const mongoDB = "mongodb://localhost:27017/testdb";
 mongoose.connect(mongoDB);
 mongoose.Promise = Promise;
 const db = mongoose.connection;
