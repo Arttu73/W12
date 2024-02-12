@@ -2,8 +2,6 @@ import './App.css';
 
 function App() {
 
-  
-
   const submit = (e) => {
    
     e.preventDefault();
@@ -12,6 +10,7 @@ function App() {
     var name = e.target.name.value;
     var author = e.target.author.value;
     var pages = e.target.pages.value;
+    console.log(name, author, pages);
     
     fetch("/api/book", {
       method: "POST",

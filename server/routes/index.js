@@ -6,7 +6,7 @@ const Books = require('../models/Books');
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-
+/*
 router.post('/api/book', async function(req, res) {
   console.log("posting")
   const name = req.body.name;
@@ -25,6 +25,6 @@ router.post('/api/book', async function(req, res) {
     res.status(500).json({ error: 'Error ' });
   }
 });
-
+*/
 
 module.exports = router;
