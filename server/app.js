@@ -8,7 +8,7 @@ var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var booksRouter = require('./routes/book');
+//var booksRouter = require('./routes/book');
 
 var app = express();
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/api/book', booksRouter);           
+//app.use('/api/book', booksRouter);           
 
 if (process.env.NODE_ENV === "development") {
     var corsOptions = {

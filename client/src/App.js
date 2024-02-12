@@ -9,7 +9,7 @@ function App() {
     e.preventDefault();
     console.log("Submitting");
 
-    fetch("/api/books", {
+    fetch("/api/book", {
       method: "POST",
       headers: {
         "Content-type": "application/json"
@@ -21,6 +21,9 @@ function App() {
       .then(data => {
         console.log(data);
       })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
 
   return (
